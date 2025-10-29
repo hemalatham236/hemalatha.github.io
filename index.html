@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hemalatha M — Data Analyst</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- AOS (optional for scroll reveal) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Hemalatha</div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+      </nav>
+      <button class="nav-toggle" aria-label="menu" onclick="toggleNav()">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left" data-aos="fade-right">
+        <p class="im">I'm</p>
+        <h1 class="hero-name">Hemalatha M</h1>
+        <h2 class="hero-sub"><span id="typed"></span><span class="cursor">|</span></h2>
+      </div>
+
+      <div class="hero-right" data-aos="fade-left">
+        <div class="hero-photo">
+          <img src="assets/profile.jpg" alt="Hemalatha profile" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container about-inner">
+      <div class="about-left" data-aos="fade-right">
+        <img src="assets/profile.jpg" alt="Profile large" />
+      </div>
+
+      <div class="about-right" data-aos="fade-left">
+        <p class="kicker">— LEARN ABOUT ME</p>
+        <h2>Data & Business Analyst</h2>
+        <p class="about-text">
+          Data Analyst with hands-on experience in Python, Excel, Tableau and Machine Learning.
+          Skilled in time-series forecasting, predictive analytics, and dashboard reporting.
+          I transform complex data into actionable business insights.
+        </p>
+
+        <div class="skill-row">
+          <div>Python & SQL</div>
+          <div class="skill-level"><span style="width:95%"></span></div>
+        </div>
+        <div class="skill-row">
+          <div>Data Analysis & Visualization (Excel, Tableau)</div>
+          <div class="skill-level"><span style="width:88%"></span></div>
+        </div>
+        <div class="skill-row">
+          <div>Machine Learning & Forecasting</div>
+          <div class="skill-level"><span style="width:78%"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE (timeline) -->
+  <section id="experience" class="section timeline">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+
+      <div class="timeline-grid">
+        <!-- Item 1 -->
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="card">
+            <h3>Data Science Intern (Time Series Forecast)</h3>
+            <p class="sub">C5i Company — Bangalore (June 2024 - Dec 2024)</p>
+            <ul>
+              <li>Time Series Forecasting of Temperature Trends using the AirQualityUCI dataset.</li>
+              <li>Extracted & transformed large datasets (from 9,357 records to 391 daily points).</li>
+              <li>Data cleaning, aggregation, resampling and feature selection (Granger causality, correlation, Lasso).</li>
+              <li>Built and fine-tuned ARIMA, SARIMA, XGBoost, Prophet and Holt-Winters models; evaluated with MAE.</li>
+              <li>Delivered actionable insights to optimize greenhouse heating/cooling and irrigation systems.</li>
+              <li>Collaborated in dashboard development for visualization & reporting.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="card">
+            <h3>EDA on Ad Performance Data</h3>
+            <p class="sub">C5i Company</p>
+            <ul>
+              <li>Conducted in-depth EDA to analyse relationship between Customer Engagement Score (CES) and ad metrics (spend, impressions, clicks).</li>
+              <li>Evaluated CES components including recall, cognitive load, ad copy persuasiveness and readability.</li>
+              <li>Investigated industry-wise CES distribution and spending patterns to identify correlations with ad performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="card">
+            <h3>Application Development (Flask)</h3>
+            <p class="sub">Personal / Project</p>
+            <ul>
+              <li>Built a Flask app for data upload (XLSX, CSV, Parquet) with file validation and error handling.</li>
+              <li>Implemented features to preview top-10 rows and create scatter plots by selecting two numerical variables with dynamic dropdowns.</li>
+              <li>Frontend: HTML, CSS and JavaScript for a clean, responsive UI.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card" data-aos="zoom-in">
+          <img src="assets/project1.jpg" alt="Netflix project" />
+          <div class="project-footer">
+            <span>Netflix Business Case Study</span>
+            <a href="https://github.com/hemalatham236/Netflix--Data-Exploration-and-Visualisation" target="_blank" class="git" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="project-desc">
+            <p>Analyzed 8,800+ Netflix titles to uncover content & rating trends, genre popularity, and regional production patterns.</p>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-aos="zoom-in" data-aos-delay="80">
+          <img src="assets/project2.jpg" alt="Walmart project" />
+          <div class="project-footer">
+            <span>Walmart Business Case Study</span>
+            <a href="https://github.com/hemalatham236/Walmart--dataset--Confidence-Interval-and-CLT" target="_blank" class="git"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="project-desc">
+            <p>Analyzed 550,000+ Walmart customer records using CLT and 95% confidence intervals to derive spending insights and demographic patterns.</p>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-aos="zoom-in" data-aos-delay="160">
+          <img src="assets/project3.jpg" alt="Yulu project" />
+          <div class="project-footer">
+            <span>Yulu Bike Sharing Case Study</span>
+            <a href="https://github.com/hemalatham236/Yulu-Data-set--Hypothesis-Testing" target="_blank" class="git"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="project-desc">
+            <p>Performed ANOVA, t-tests and correlation analysis to identify factors (season, weather, working day) affecting ride counts and improve forecasting accuracy.</p>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card" data-aos="zoom-in">
+          <img src="assets/project4.jpg" alt="Target SQL project" />
+          <div class="project-footer">
+            <span>Target Case Study — SQL</span>
+            <a href="https://github.com/hemalatham236/learning/tree/main/hemalatha" target="_blank" class="git"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="project-desc">
+            <p>Analyzed customer order patterns using SQL; identified peak times and inefficiencies and improved cost efficiency by 136% through data-driven strategies.</p>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card" data-aos="zoom-in">
+          <img src="assets/project5.jpg" alt="E-commerce project" />
+          <div class="project-footer">
+            <span>E-Commerce Business Analysis</span>
+            <a href="https://github.com/hemalatham236" target="_blank" class="git"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="project-desc">
+            <p>End-to-end analysis of e-commerce transactional data to identify customer segments and recommend targeted strategies.</p>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card" data-aos="zoom-in">
+          <img src="assets/project6.jpg" alt="Loan default" />
+          <div class="project-footer">
+            <span>Loan Default Analysis</span>
+            <a href="https://github.com/hemalatham236" target="_blank" class="git"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="project-desc">
+            <p>Built predictive models & EDA to detect default risk and propose mitigation strategies.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section timeline">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Academic Background</h2>
+
+      <div class="timeline-grid">
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="card">
+            <h3>Scaler — Data Science Specialization</h3>
+            <p class="sub">Nov 2023 — Nov 2024</p>
+            <p>Specialized training in Data Science & Machine Learning (Top 1%).</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="card">
+            <h3>Careerera — Post Graduate Programme in Data Science</h3>
+            <p class="sub">Jul 2023 — Aug 2024</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="card">
+            <h3>Gandhi Krishi Vignana Kendra — B.Sc. Agricultural Marketing & Co-operation</h3>
+            <p class="sub">2012 — 2016</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section timeline">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Achievements</h2>
+
+      <div class="timeline-grid">
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="card">
+            <h3>SQL Certificate — Scaler</h3>
+            <p class="sub">Mar 2024</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="card">
+            <h3>Python Libraries Certificate — Scaler</h3>
+            <p class="sub">Apr 2024</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="card">
+            <h3>EDA Fundamentals — Scaler</h3>
+            <p class="sub">Jun 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <h3>Hemalatha M</h3>
+      <p>Bangalore, Karnataka, India</p>
+      <p class="contact">
+        <a href="mailto:hemalatham236@gmail.com">hemalatham236@gmail.com</a> &nbsp; | &nbsp; 7975025711
+      </p>
+
+      <div class="socials">
+        <a href="https://github.com/hemalatham236" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hemalatha-m-84b561233/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <p class="copyright">© 2025 Hemalatha M — All right reserved</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="topBtn" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script> AOS.init({duration:700, once:true, offset:80}); </script>
+</body>
+</html>

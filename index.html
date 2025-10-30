@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <!-- AOS (scroll animation) -->
+  <!-- AOS (optional for scroll reveal) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
@@ -27,7 +27,7 @@
         <a href="#experience">Experience</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#education">Education</a>
-        <a href="#achievements">Achievements</a>
+        <a href="#certifications">Certifications</a>
       </nav>
       <button class="nav-toggle" aria-label="menu" onclick="toggleNav()">☰</button>
     </div>
@@ -39,7 +39,7 @@
       <div class="hero-left" data-aos="fade-right">
         <p class="im">I'm</p>
         <h1 class="hero-name">Hemalatha M</h1>
-        <h2 class="hero-sub"><span>Data Analyst</span></h2>
+        <h2 class="hero-sub"><span id="typed"></span><span class="cursor">|</span></h2>
       </div>
 
       <div class="hero-right" data-aos="fade-left">
@@ -82,31 +82,55 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- EXPERIENCE (timeline) -->
   <section id="experience" class="section timeline">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
 
       <div class="timeline-grid">
+        <!-- Item 1 -->
         <div class="timeline-item left" data-aos="fade-right">
           <div class="card">
             <h3>Data Science Intern (Time Series Forecast)</h3>
             <p class="sub">C5i Company — Bangalore (June 2024 - Dec 2024)</p>
             <ul>
-              <li>Forecasted temperature trends using AirQualityUCI dataset to optimize greenhouse systems.</li>
-              <li>Developed ARIMA, SARIMA, XGBoost, Prophet models and evaluated with MAE.</li>
-              <li>Collaborated in dashboard creation for predictive visualization.</li>
+              <li>Time Series Forecasting of Temperature Trends using the AirQualityUCI dataset.</li>
+              <li>Extracted & transformed large datasets (from 9,357 records to 391 daily points).</li>
+              <li>Data cleaning, aggregation, resampling and feature selection (Granger causality, correlation, Lasso).</li>
+              <li>Built and fine-tuned ARIMA, SARIMA, XGBoost, Prophet and Holt-Winters models; evaluated with MAE.</li>
+              <li>Delivered actionable insights to optimize greenhouse heating/cooling and irrigation systems.</li>
+              <li>Collaborated in dashboard development for visualization & reporting.</li>
             </ul>
           </div>
         </div>
 
+        <!-- Item 2 -->
         <div class="timeline-item right" data-aos="fade-left">
           <div class="card">
             <h3>EDA on Ad Performance Data</h3>
             <p class="sub">C5i Company</p>
             <ul>
-              <li>Analyzed correlation between CES and ad spend/impressions metrics.</li>
-              <li>Evaluated cognitive and emotional engagement across industries.</li>
+              <li>Conducted in-depth EDA to analyse relationship between Customer Engagement Score (CES) and ad metrics (spend, impressions, clicks).</li>
+              <li>Evaluated CES components including recall, cognitive load, ad copy persuasiveness and readability.</li>
+              <li>Investigated industry-wise CES distribution and spending patterns to identify correlations with ad performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3 (Updated with GitHub link) -->
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="card">
+            <h3>
+              Application Development (Flask)
+              <a href="https://github.com/hemalatham236/learning/tree/main/hemalatha" target="_blank" class="git" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </h3>
+            <p class="sub">C5i Company</p>
+            <ul>
+              <li>Built a Flask app for data upload (XLSX, CSV, Parquet) with file validation and error handling.</li>
+              <li>Implemented features to preview top-10 rows and create scatter plots by selecting two numerical variables with dynamic dropdowns.</li>
+              <li>Frontend: HTML, CSS and JavaScript for a clean, responsive UI.</li>
             </ul>
           </div>
         </div>
@@ -120,44 +144,52 @@
       <h2 class="section-title" data-aos="fade-up">My Projects</h2>
 
       <div class="projects-grid">
-        <!-- Netflix -->
+        <!-- Project 1 -->
         <article class="project-card" data-aos="zoom-in">
           <img src="assets/project1.jpg" alt="Netflix project" />
           <div class="project-footer">
             <span>Netflix Business Case Study</span>
-            <a href="https://github.com/hemalatham236/Netflix--Data-Exploration-and-Visualisation" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/hemalatham236/Netflix--Data-Exploration-and-Visualisation" target="_blank" class="git" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
-          <p>Analyzed 8,800+ Netflix titles for trends in genre, ratings, and production countries.</p>
+          <div class="project-desc">
+            <p>Analyzed 8,800+ Netflix titles to uncover content & rating trends, genre popularity, and regional production patterns.</p>
+          </div>
         </article>
 
-        <!-- Walmart -->
-        <article class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <!-- Project 2 -->
+        <article class="project-card" data-aos="zoom-in" data-aos-delay="80">
           <img src="assets/project2.jpg" alt="Walmart project" />
           <div class="project-footer">
             <span>Walmart Business Case Study</span>
-            <a href="https://github.com/hemalatham236/Walmart--dataset--Confidence-Interval-and-CLT" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/hemalatham236/Walmart--dataset--Confidence-Interval-and-CLT" target="_blank" class="git"><i class="fab fa-github"></i></a>
           </div>
-          <p>Applied CLT and confidence intervals on 550,000+ records to understand spending patterns.</p>
+          <div class="project-desc">
+            <p>Analyzed 550,000+ Walmart customer records using CLT and 95% confidence intervals to derive spending insights and demographic patterns.</p>
+          </div>
         </article>
 
-        <!-- Yulu -->
-        <article class="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <!-- Project 3 -->
+        <article class="project-card" data-aos="zoom-in" data-aos-delay="160">
           <img src="assets/project3.jpg" alt="Yulu project" />
           <div class="project-footer">
             <span>Yulu Bike Sharing Case Study</span>
-            <a href="https://github.com/hemalatham236/Yulu-Data-set--Hypothesis-Testing" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/hemalatham236/Yulu-Data-set--Hypothesis-Testing" target="_blank" class="git"><i class="fab fa-github"></i></a>
           </div>
-          <p>Conducted ANOVA and correlation tests to evaluate factors affecting ride count.</p>
+          <div class="project-desc">
+            <p>Performed ANOVA, t-tests and correlation analysis to identify factors (season, weather, working day) affecting ride counts and improve forecasting accuracy.</p>
+          </div>
         </article>
 
-        <!-- Target SQL -->
-        <article class="project-card" data-aos="zoom-in" data-aos-delay="300">
+        <!-- Project 4 -->
+        <article class="project-card" data-aos="zoom-in">
           <img src="assets/project4.jpg" alt="Target SQL project" />
           <div class="project-footer">
             <span>Target Case Study — SQL</span>
-            <a href="https://github.com/hemalatham236/learning/tree/main/hemalatha" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/hemalatham236/learning/tree/main/hemalatha" target="_blank" class="git"><i class="fab fa-github"></i></a>
           </div>
-          <p>Used SQL to analyze order data, identify inefficiencies, and improve cost-effectiveness by 136%.</p>
+          <div class="project-desc">
+            <p>Analyzed customer order patterns using SQL; identified peak times and inefficiencies and improved cost efficiency by 136% through data-driven strategies.</p>
+          </div>
         </article>
       </div>
     </div>
@@ -173,6 +205,7 @@
           <div class="card">
             <h3>Scaler — Data Science Specialization</h3>
             <p class="sub">Nov 2024 — Present</p>
+            <p>Specialized training in Data Science & Machine Learning (Top 1%).</p>
           </div>
         </div>
 
@@ -185,7 +218,7 @@
 
         <div class="timeline-item left" data-aos="fade-right">
           <div class="card">
-            <h3>GKVK — B.Sc. Agricultural Marketing & Co-operation</h3>
+            <h3>Gandhi Krishi Vignana Kendra — B.Sc. Agricultural Marketing & Co-operation</h3>
             <p class="sub">2012 — 2016</p>
           </div>
         </div>
@@ -193,46 +226,44 @@
     </div>
   </section>
 
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" class="section timeline">
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section timeline">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Achievements</h2>
 
       <div class="timeline-grid">
         <div class="timeline-item left" data-aos="fade-right">
           <div class="card">
-            <h3><a href="https://moonshot.scaler.com/s/sl/fcHG28k-XO" target="_blank">SQL Certificate — Scaler</a></h3>
+            <h3>SQL Certificate — Scaler</h3>
+            <p class="sub"><a href="https://moonshot.scaler.com/s/sl/fcHG28k-XO" target="_blank">View Certificate</a></p>
           </div>
         </div>
 
         <div class="timeline-item right" data-aos="fade-left">
           <div class="card">
-            <h3><a href="https://moonshot.scaler.com/s/sl/sEhH-mysYw" target="_blank">Python Libraries Certificate — Scaler</a></h3>
+            <h3>Python Libraries Certificate — Scaler</h3>
+            <p class="sub"><a href="https://moonshot.scaler.com/s/sl/sEhH-mysYw" target="_blank">View Certificate</a></p>
           </div>
         </div>
 
-        <div class="timeline-item left" data-aos="fade-right">
+        <div class="timeline-item right" data-aos="fade-right">
           <div class="card">
-            <h3><a href="https://moonshot.scaler.com/s/sl/beW6mrNfXR" target="_blank">EDA Fundamentals — Scaler</a></h3>
+            <h3>EDA Fundamentals — Scaler</h3>
+            <p class="sub"><a href="https://moonshot.scaler.com/s/sl/beW6mrNfXR" target="_blank">View Certificate</a></p>
           </div>
         </div>
 
-        <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-item left" data-aos="fade-left">
           <div class="card">
-            <h3><a href="https://awards.careerera.com/Q0FSMjAyNC1XUzEwMzk5Ny0xMTQwMDU5LzE," target="_blank">Data Science Certificate — Careerera</a></h3>
+            <h3>Data Science Certificate — Careerera</h3>
+            <p class="sub"><a href="https://awards.careerera.com/Q0FSMjAyNC1XUzEwMzk5Ny0xMTQwMDU5LzE" target="_blank">View Certificate</a></p>
           </div>
         </div>
-      </div>
-
-      <div class="flask-link" data-aos="zoom-in" style="text-align:center; margin-top:2rem;">
-        <a href="https://github.com/hemalatham236/learning/tree/main/hemalatha" target="_blank" class="btn" style="background:#e63946; color:#fff; padding:0.75rem 1.5rem; border-radius:8px; text-decoration:none; font-weight:600;">
-          Application Development Project (Flask)
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- CONTACT / FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <h3>Hemalatha M</h3>
@@ -246,14 +277,15 @@
         <a href="https://www.linkedin.com/in/hemalatha-m-84b561233/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
 
-      <p class="copyright">© 2025 Hemalatha M — All rights reserved</p>
+      <p class="copyright">© 2025 Hemalatha M — All right reserved</p>
     </div>
   </footer>
 
+  <!-- Back to top -->
   <button id="topBtn" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
-  <script>AOS.init({duration:700, once:true, offset:80});</script>
+  <script> AOS.init({duration:700, once:true, offset:80}); </script>
 </body>
 </html>

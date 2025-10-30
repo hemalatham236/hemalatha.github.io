@@ -1,5 +1,5 @@
 /* Typing animation */
-const typedWords = ["Data Storyteller", "Business Analyst", "Machine Learning Enthusiast"];
+const typedWords = ["Data Analyst", "Business Analyst", "Machine Learning Enthusiast"];
 let tIndex = 0, cIndex = 0, forward = true;
 const typedEl = document.getElementById('typed');
 const speed = 80;
